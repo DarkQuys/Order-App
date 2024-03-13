@@ -28,7 +28,7 @@ function SignIn() {
                 <div className='mt-11 font-medium text-sky-500'>Quên Mật Khẩu</div>
             <div className='flex font-semibold mt-4'>
                 <div>Chưa Có Tài Khoản chuaaa ?</div>
-                <div className='text-sky-500 ml-6'>Tạo Tài Khoản</div>
+                <div className='text-sky-500 ml-6'>Tạo Tài Khoản điiiii</div>
             </div>
             </div>
            
