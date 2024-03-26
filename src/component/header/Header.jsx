@@ -1,6 +1,10 @@
 import { Badge } from "antd";
-
+import { useNavigate } from "react-router-dom";
 function Header() {
+    const navigate = useNavigate()
+    const toSignIn = () => {
+        navigate("/sign-in")
+    }
     return ( 
         <div className="">
             <div className="flex text-sm items-center h-[75px] shadow-xl text-white grid grid-cols-4 gap-4 bg-blue-500">
@@ -24,8 +28,8 @@ function Header() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                         </svg>      
-                       <div className="flex flex-col pl-1 text-sm">
-                            <div>Đăng kí/Đăng nhập</div>
+                       <div className="flex cursor-pointer flex-col pl-1 text-sm">
+                            <div onClick={toSignIn} >Đăng kí/Đăng nhập</div>
                             <div>hehe</div>
                         </div>
                         <div className="flex pl-3">

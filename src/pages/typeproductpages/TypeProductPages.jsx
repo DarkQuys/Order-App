@@ -4,7 +4,7 @@ import { Pagination } from "antd";
 function TypeProductPage() {
     return (
         <div className="pt-5 pl-20  bg-slate-300 pr-6">
-            <div className="grid grid-cols-6 gap-5 ">
+            <div className="grid grid-cols-6  ">
             <div className="ml-4 ">
                 <NappaComponent/>
             </div>
