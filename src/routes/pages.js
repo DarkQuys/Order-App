@@ -4,6 +4,7 @@ import Product from "../pages/productpage/ProductPage";
 import TypeProductPage from "../pages/typeproductpages/TypeProductPages";
 import SignIn from "../component/Tk/SigIn";
 import SignUp from "../component/Tk/signUp";
+import CreateAcc from "../component/Tk/create";
 
 export const routes = [
     {
@@ -29,6 +30,11 @@ export const routes = [
     {
         path: '/sign-up' ,
         page: SignUp,
+        isShowHeader :false 
+    },
+    {
+        path: '/create-acc' ,
+        page: CreateAcc,
         isShowHeader :false 
     },
     {
