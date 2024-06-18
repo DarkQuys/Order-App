@@ -5,6 +5,8 @@ import TypeProductPage from "../pages/typeproductpages/TypeProductPages";
 import SignIn from "../component/Tk/SigIn";
 import SignUp from "../component/Tk/signUp";
 import CreateAcc from "../component/Tk/create";
+import ProfileUser from "../pages/profile/profileUser";
+import AdminPage from "../pages/adminpage/AdminPage";
 
 export const routes = [
     {
@@ -13,12 +15,12 @@ export const routes = [
         isShowHeader :true 
     },
     {
-        path: '/product',
+        path: '/product/:id',
         page: Product,
         isShowHeader :true 
     },
     {
-        path: '/type',
+        path: '/typeproduct/:type',
         page: TypeProductPage,
         isShowHeader :true 
     },
@@ -33,12 +35,22 @@ export const routes = [
         isShowHeader :false 
     },
     {
+        path: '/profile' ,
+        page: ProfileUser,
+        isShowHeader :true
+    },
+    {
         path: '/create-acc' ,
         page: CreateAcc,
         isShowHeader :false 
     },
     {
-        path: '/other',
+        path: '/system/admin' ,
+        page: AdminPage,
+        isPrivate : true
+    },
+    {
+        path: '/order',
         page: OderPage,
         isShowHeader :true 
     },
