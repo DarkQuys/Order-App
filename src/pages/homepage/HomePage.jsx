@@ -85,23 +85,23 @@ function HomePage() {
   useEffect(()=>{
       call('áo')
   },[])
-
+  console.log(products?.data.length ,"hehe" ,limit)
     return ( 
   <div className="px-28">
     <LoadingComponent isLoading={isLoading}>
     <SliderComponent arrImg={[slider3,slider2 ]} />
   
-
-
-<nav class="bg-white dark:bg-gray-300 h-[45px] w-full  border-b border-gray-200 ">
-<div className="flex mt-7 items-center justify-around  ">{allType.map((ha)=>{
+ 
+    <div className="mt-6 font-semibold">Một số loại mặt hàng</div>
+<nav class="bg-white dark:bg-gray-100 h-[45px] w-full  border-b border-gray-200 ">
+<div className="flex mt-4 items-center justify-around  ">{allType.map((ha)=>{
       return (
         <div onClick={()=>handleToTypeProduct(ha)} className="mr-20 ml-2 mt-2 cursor-pointer hover:text-sky-400">{ha}</div>
       )
     })}</div>
 </nav>
 
-   
+   <div className="font-semibold mt-4">Danh sách sản phẩm</div>
        <div className='flex grid grid-cols-5'>
               {products?.data?.map((product)=>{
                 return (
@@ -123,8 +123,8 @@ function HomePage() {
               })}
                
        </div>
-   
-     <div className="flex justify-center mt-7"><Button disabled={products?.data?.length===products?.total} onClick={()=> setLimit(pev=> pev+5)} className="bg-blue-400">More Page</Button></div>
+     
+     <div className="flex justify-center mt-7"><Button disabled={products?.data?.length===10} onClick={()=> setLimit(pev=> pev+5)} className="bg-blue-400">More Page</Button></div>
          {/* <NappaComponent/> */}
          </LoadingComponent>
   </div>

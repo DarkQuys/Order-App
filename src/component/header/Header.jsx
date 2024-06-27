@@ -21,7 +21,7 @@ function Header() {
     const [isLoading ,setIsLoading] = useState(false)
     const [userName , setUserName] = useState('')
     const [search , setSeacrch]=useState('')
-    const user = useSelector((state)=>state.user)
+    const user = useSelector((state)=>state?.user)
     const toSignIn = () => {
         navigate("/sign-in")
     }
@@ -31,13 +31,14 @@ function Header() {
         //dispatch(logOut())
         toSignIn()
     }
-    const orderProduct = useSelector(state => state.order.orderItems.length)
+    const orderProduct = useSelector(state => state?.order?.orderItems?.length)
     console.log('oder',orderProduct)
     useEffect(()=>{
         setIsLoading(true)
         setUserName(user?.name)
         setIsLoading(false)
     }, [user?.name])
+    console.log('xxxx',user)
     const content = (
         <div className="cursor-pointer">
           <p className="hover:bg-violet-200" onClick={logOutUser}>Log Out</p>

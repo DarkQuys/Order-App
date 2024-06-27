@@ -8,19 +8,18 @@ function CardComponent(props) {
     const {countInStock , description , image , name , price , rating , type } = props
 
     
-    return (<div className='w-56 mt-7 relative font-light h-96 rounded overflow-hidden shadow-lg'>
+    return (<div className='hover:opacity-80  w-56 mt-7 relative font-light h-96 rounded overflow-hidden shadow-lg'>
        <div className='h-[200px] flex items-center'> <img src={image} alt='picture' /></div>
-      <div className='pt-3 pl-11 h-[100%] bg-violet-50'>
-            <div className=''>{type}</div>
-            <div className='flex  items-center pt-2 '>
+      <div className='hover:bg-violet-200 pt-3 pl-4 h-[100%] bg-violet-50'>
+            <div className='text-lg font-semibold
+ '>{type}</div>
+            <div className='flex flex-col  pt-2 '>
                 <div className='pr-[3px]'>
-                    {rating}
-                <StarOutlined className='text-yellow-400'/>
+                <Rate allowHalf defaultValue={rating} />
                 </div>
-                <div className='bg-slate-500 h-[14px] w-[1px]'></div>
-                <div className='pl-[4px]'>da ban 1000+</div>
+                <div className='mt-2'>Đã bán 1000+</div>
             </div>
-            <div className='text-lg pt-2 font-medium text-red-500'>{price}</div>
+            <div className='text-lg pt-2 font-medium text-red-500'>{price} Đồng</div>
         </div>
         <img src={logo1} alt='logo' className='w-[90px] h-[23px] top-0 absolute' />
      

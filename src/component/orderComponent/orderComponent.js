@@ -12,15 +12,15 @@ const OrderComponent = ({image , name , price , mount ,product, thanhtien})=>{
     }
     return (
         <div>
-            <div className="w-[1000px] box-border items-center h-[130px] bg-blue-100 shadow-lg flex rounded ">
+            <div className="w-[1000px] relative box-border items-center h-[130px] bg-blue-100 shadow-lg flex rounded ">
               
-                   <div className="box-border flex flex-col ml-[57px]" > <img className="h-20" src="https://i5.walmartimages.com/asr/cde7fe31-78c2-434c-bbd0-e3acd8d7e9ff.ebd2fccd1adf37e03140ece924ecd221.jpeg" alt='hinhanh'/>
+                   <div className="box-border flex flex-col ml-[57px] absolute" > <img className="h-20" src="https://i5.walmartimages.com/asr/cde7fe31-78c2-434c-bbd0-e3acd8d7e9ff.ebd2fccd1adf37e03140ece924ecd221.jpeg" alt='hinhanh'/>
                     <div>{name} </div>
                    </div>      
-                <div className=" box-border ml-[131px]">{price}</div>
-                <div className=" box-border ml-[180px]">{mount}</div>
-                <div className=" box-border ml-[196px]">Thanh tien</div>
-                 <DeleteOutlined onClick={handleDelete} className="ml-[144px]" />
+                <div className="absolute box-border left-[288px] text-red-500 ">{price} VND</div>
+                <div className="absolute box-border left-[487px] text-blue-500">{mount}</div>
+                <div className="absolute box-border left-[693px] text-red-500">{price*mount} VND</div>
+                 <DeleteOutlined onClick={handleDelete} className="absolute hover:text-rose-700 left-[914px]" />
             </div>
         </div>
     )

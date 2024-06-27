@@ -17,11 +17,11 @@ function OderPage() {
       };
       return (
         <div className="pl-60 mt-3 px-10">
-            <div className="w-[1000px] items-center mb-3 h-[50px] bg-blue-100 shadow-lg flex rounded justify-around">
-                <div>San pham</div>
-                <div>Don gia</div>
-                <div>So luong</div>
-                <div>Thanh tien</div>
+            <div className="w-[1000px] font-semibold items-center mb-3 h-[50px] bg-blue-100 shadow-lg flex rounded justify-around">
+                <div>Sản phẩm</div>
+                <div>Đơn giá</div>
+                <div>Số lượng</div>
+                <div>Thành tiền</div>
                 <DeleteOutlined />
             </div>
             {orrder?.map((item)=>{
