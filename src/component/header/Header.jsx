@@ -11,7 +11,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Search from "antd/es/input/Search";
 import { searchProduct } from "../../redux/slice/productSlide";
-import { MenuOutlined } from "@ant-design/icons";
+import { MenuOutlined, UserOutlined } from "@ant-design/icons";
 
 
 function Header() {
@@ -22,6 +22,7 @@ function Header() {
     const [userName , setUserName] = useState('')
     const [search , setSeacrch]=useState('')
     const user = useSelector((state)=>state?.user)
+    console.log("uuu", user)
     const toSignIn = () => {
         navigate("/sign-in")
     }
@@ -53,10 +54,11 @@ function Header() {
     const dispatchSearch=()=>{
         dispatch(searchProduct(search))
     }
+    
     return ( 
         <div className="">
             <div className="flex text-sm items-center h-[75px] shadow-xl text-white grid grid-cols-4 gap-4 bg-violet-600">
-                <div onClick={()=>navigate('/')} className="font-bold cursor-pointer text-2xl pl-24">
+                <div onClick={()=>navigate('/')} className="font-bold ml-4 cursor-pointer text-2xl pl-24">
                     DarkQuys
                 </div>
                 {/* <div className="flex rounded-lg pl-44 content-center items-center col-span-2 bg-white h-8 w-[80%]">
@@ -87,7 +89,7 @@ function Header() {
                        
                                 
                               <Popover content={content} className="flex w-36 items-center" title="" trigger="click">
-                                <img className="h-10 rounded-full" src="https://tse4.mm.bing.net/th?id=OIP.hngT-XFpotsdqWi-lYfc_wHaG9&pid=Api&P=0&h=220"/>
+                                <img className="h-10 w-10 objectFit rounded-full" src={user.avatar}/>
                               <div className="cursor-pointer ml-2 w-20">{user.name}</div>
                               
                             </Popover>
@@ -96,8 +98,9 @@ function Header() {
                         </>
                         ) : 
 
-                        ( <div className="flex cursor-pointer flex-col pl-1 text-sm">
-                        <div onClick={toSignIn} className="w-20" >Đăng kí /Đăng nhập</div>
+                        ( <div className="flex flex-row cursor-pointer  text-sm">
+                            <UserOutlined className="mr-1"/>
+                        <div onClick={toSignIn} className="w-20" >Đăng nhập</div>
                     </div>)
                         }
                       

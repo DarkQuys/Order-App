@@ -9,7 +9,7 @@ function CardComponent(props) {
 
     
     return (<div className='hover:opacity-80  w-56 mt-7 relative font-light h-96 rounded overflow-hidden shadow-lg'>
-       <div className='h-[200px] flex items-center'> <img src={image} alt='picture' /></div>
+       <div className='h-[200px] flex items-center'> <img src={image} className='objectFit h-[200px] w-[225px]' alt='picture' /></div>
       <div className='hover:bg-violet-200 pt-3 pl-4 h-[100%] bg-violet-50'>
             <div className='text-lg font-semibold
  '>{type}</div>

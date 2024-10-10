@@ -61,7 +61,7 @@ function ProductComponent({idProduct}) {
                     <div className='flex justify-around px-4 items-center '>
                         <img src={dataProduct?.product?.image} alt='anhdienthoai' className='border-indigo-200 border-2 hover:border-indigo-400 rounded-md border-1  w-[100px] '  />
                         <img src={dataProduct?.product?.image} alt='anhdienthoai' className='border-indigo-200 border-2 hover:border-indigo-400 rounded-md border-1  w-[100px] '  />
-                        <img src={Image1} alt='anhdienthoai' className='border-indigo-200 border-2 hover:border-indigo-400 rounded-md border-1  w-[100px] ' />
+                        <img src={dataProduct?.product?.image} alt='anhdienthoai' className='border-indigo-200 border-2 hover:border-indigo-400 rounded-md border-1  w-[100px] ' />
                         <img src={dataProduct?.product?.image} alt='anhdienthoai' className='border-indigo-200 border-2 hover:border-indigo-400 rounded-md border-1  w-[100px] ' />
                         <img src={dataProduct?.product?.image} alt='anhdienthoai' className='border-indigo-200 border-2 hover:border-indigo-400 rounded-md border-1  w-[100px] '  />
                     </div>

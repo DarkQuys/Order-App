@@ -77,64 +77,66 @@ function ProfileUser(){
          mutation.mutate({ id :user?.id , name , email , phone , address , avatar, access_token : user?.access_token})
     }
     return (
-        <form class="w-full max-w-sm">
-  <div class="flex items-center border-b border-teal-500 py-2">
-    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" value={email} onChange={handleOnChangeEmail} type="text" placeholder="" aria-label="Full name"/>
-    <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-      Sign Up
-    </button>
-    <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-      Cancel
-    </button>
-  </div>
-  <div class="flex items-center border-b border-teal-500 py-2">
-    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" onChange={handleOnChangeName} value={name} placeholder="" aria-label="Full name"/>
-    <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-      Sign Up
-    </button>
-    <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-      Cancel
-    </button>
-  </div>
-  <div class="flex items-center border-b border-teal-500 py-2">
-    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" value={address} onChange={handleOnChangeAddress} placeholder="" aria-label="Full name"/>
-    <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-      Sign Up
-    </button>
-    <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-      Cancel
-    </button>
-  </div>
-  <div class="flex items-center border-b border-teal-500 py-2">
-    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" value={phone} onChange={handleOnChangePhone} placeholder="" aria-label="Full name"/>
-    <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-      Sign Up
-    </button>
-    <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-      Cancel
-    </button>
-  </div>
-  <div>Your Avatar</div>
-  <Upload onChange={handleOnChangeAvatart} maxCount={1}>
-    <Button icon={<UploadOutlined/>}>SelectFile</Button>
-  </Upload>
-  {avatar && (<img src={avatar} style={{
-    height : '60px' ,
-    width: '60px' ,
-    borderRadius : '50%',
-    objectFit : 'cover'
-
-  }} alt="avatar"/>)}
-  <div class="flex items-center border-b border-teal-500 py-2">
-    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text"  placeholder="" aria-label="Full name"/>
-    <button onClick={handleUpdateUser} class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-      UPDATE
-    </button>
-    <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-      Cancel
-    </button>
-  </div>
-</form>    
+        <div className="pt-8 flex justify-center">
+          <form class="w-full max-w-sm">
+    <div class="flex items-center border-b border-teal-500 py-2">
+      <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" value={email} onChange={handleOnChangeEmail} type="text" placeholder="" aria-label="Full name"/>
+      <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+        Sign Up
+      </button>
+      <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+        Cancel
+      </button>
+    </div>
+    <div class="flex items-center border-b border-teal-500 py-2">
+      <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" onChange={handleOnChangeName} value={name} placeholder="" aria-label="Full name"/>
+      <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+        Sign Up
+      </button>
+      <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+        Cancel
+      </button>
+    </div>
+    <div class="flex items-center border-b border-teal-500 py-2">
+      <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" value={address} onChange={handleOnChangeAddress} placeholder="" aria-label="Full name"/>
+      <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+        Sign Up
+      </button>
+      <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+        Cancel
+      </button>
+    </div>
+    <div class="flex items-center border-b border-teal-500 py-2">
+      <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" value={phone} onChange={handleOnChangePhone} placeholder="" aria-label="Full name"/>
+      <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+        Sign Up
+      </button>
+      <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+        Cancel
+      </button>
+    </div>
+    <div>Your Avatar</div>
+    <Upload onChange={handleOnChangeAvatart} maxCount={1}>
+      <Button icon={<UploadOutlined/>}>SelectFile</Button>
+    </Upload>
+    {avatar && (<img src={avatar} style={{
+      height : '60px' ,
+      width: '60px' ,
+      borderRadius : '50%',
+      objectFit : 'cover'
+  
+    }} alt="avatar"/>)}
+    <div class="flex items-center border-b border-teal-500 py-2">
+      <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text"  placeholder="" aria-label="Full name"/>
+      <button onClick={handleUpdateUser} class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+        UPDATE
+      </button>
+      <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+        Cancel
+      </button>
+    </div>
+  </form>    
+        </div>
     )
 }
 

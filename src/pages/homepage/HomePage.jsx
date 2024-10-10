@@ -12,6 +12,8 @@ import { useSelector } from "react-redux";
 import { Button } from "antd";
 import LoadingComponent from "../../component/Loading/LoadingComponent";
 import { useNavigate } from "react-router-dom";
+import MyFooter from "../../component/footer/Footer";
+
 
 function HomePage() {
   const orr = useSelector(state => state.order)
@@ -89,7 +91,7 @@ function HomePage() {
     return ( 
   <div className="px-28">
     <LoadingComponent isLoading={isLoading}>
-    <SliderComponent arrImg={[slider3,slider2 ]} />
+    <SliderComponent arrImg={["https://img4.thuthuatphanmem.vn/uploads/2020/12/25/anh-bia-bo-my-pham-fob_094444611.jpg","https://img4.thuthuatphanmem.vn/uploads/2020/12/25/anh-bia-bo-my-pham-lanci-den-trang-sang-trong_094444937.jpg","https://images2.thanhnien.vn/Uploaded/thanhnx/2022_03_09/iphone-13-green-apple-6652.jpg" ]} />
   
  
     <div className="mt-6 font-semibold">Một số loại mặt hàng</div>
@@ -124,9 +126,10 @@ function HomePage() {
                
        </div>
      
-     <div className="flex justify-center mt-7"><Button disabled={products?.data?.length===10} onClick={()=> setLimit(pev=> pev+5)} className="bg-blue-400">More Page</Button></div>
+     <div className="flex justify-center mt-7"><Button disabled={products?.data?.length===20} onClick={()=> setLimit(pev=> pev+5)} className="bg-blue-400">More Page</Button></div>
          {/* <NappaComponent/> */}
          </LoadingComponent>
+         <MyFooter/>
   </div>
   
      );

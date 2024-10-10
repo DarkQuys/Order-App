@@ -10,7 +10,7 @@ function SliderComponent({arrImg}) {
       };
       return (
         <div className=" ">
-            <Slider {...settings}>
+            <Slider slide={true} {...settings}>
                   {arrImg.map((image) => {
                       return (
                           <div className="">

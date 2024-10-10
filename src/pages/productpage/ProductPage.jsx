@@ -4,7 +4,7 @@ import ProductComponent from "../../component/productdetail/ProductComponent";
 function Product() {
     const idProduct = useParams()
     return ( 
-        <div>
+    <div>
             <ProductComponent idProduct={idProduct}/>
     </div>
      );
